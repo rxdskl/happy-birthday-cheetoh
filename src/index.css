@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bangers&family=Luckiest+Guy&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-comic-loud: "Bangers", sans-serif;
+  --font-comic-title: "Luckiest Guy", sans-serif;
+  --font-comic-hand: "Architects Daughter", cursive;
+  --font-sans: "Space Grotesk", sans-serif;
+}
+
+/* Custom Comic Book Halftone Backgrounds */
+.halftone-pattern {
+  background-color: #e23636;
+  background-image: radial-gradient(#be1a1a 1.8px, transparent 1.8px);
+  background-size: 12px 12px;
+}
+
+.bento-shadow {
+  box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+}
+
+.bento-shadow-lg {
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+}
+
+.halftone-pattern-light {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#cbd5e1 12%, transparent 13%),
+                    radial-gradient(#cbd5e1 12%, transparent 13%);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+}
+
+.halftone-pattern-yellow {
+  background-color: #fef08a;
+  background-image: radial-gradient(#facc15 15%, transparent 16%),
+                    radial-gradient(#facc15 15%, transparent 16%);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+}
+
+.halftone-pattern-red {
+  background-color: #fee2e2;
+  background-image: radial-gradient(#f87171 15%, transparent 16%),
+                    radial-gradient(#f87171 15%, transparent 16%);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+}
+
+.halftone-pattern-blue {
+  background-color: #e0f2fe;
+  background-image: radial-gradient(#38bdf8 15%, transparent 16%),
+                    radial-gradient(#38bdf8 15%, transparent 16%);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+}
+
+/* Vintage Comic Paper Overlay */
+.paper-overlay {
+  position: relative;
+}
+
+.paper-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 50;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Comic Page Turn Effect */
+.comic-shadow {
+  box-shadow: 10px 10px 0px 0px #000000;
+}
+
+.comic-border {
+  border: 4px solid #000000;
+}
+
+.comic-border-thin {
+  border: 2px solid #000000;
+}
+
+/* Angled Speech Bubble Tail */
+.bubble-tail-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  border-width: 15px 15px 0 0;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+  display: block;
+  width: 0;
+}
+
+.bubble-tail-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  left: 28px;
+  border-width: 17px 17px 0 0;
+  border-style: solid;
+  border-color: #000000 transparent transparent transparent;
+  display: block;
+  width: 0;
+  z-index: -1;
+}
+
+/* Animation presets for retro badges */
+@keyframes shake {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.badge-hover-shake:hover {
+  animation: shake 0.3s ease-in-out infinite;
+}
+

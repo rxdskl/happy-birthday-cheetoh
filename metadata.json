@@ -1,0 +1,6 @@
+{
+  "name": "Marvel Comic Birthday Website",
+  "description": "An interactive Marvel comic-themed birthday greeting card builder with background music, dynamic stats, customizable panels, and a special action link.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
